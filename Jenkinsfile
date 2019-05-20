@@ -8,9 +8,9 @@ pipeline {
             echo 'BUILD SUCCESS'
           }
         }
-        stage('Build With maven') {
+        stage('compile') {
           steps {
-            powershell 'mvn -B -DskipTests clean package'
+            sh 'mvn compile'
           }
         }
       }
